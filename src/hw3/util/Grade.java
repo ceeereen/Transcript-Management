@@ -32,6 +32,28 @@ public enum Grade {
     public String printGrade() {
         return "Grade: " + name();
     }
+    //gradeTaken is in type of double
+    public static Grade setGradeTaken(double val) {
+        //val must be in this range.
+        if (val > 0 && val <= 4) {
+            if (val == 4 && val > 3) {
+                return Grade.A;
+            }
+            if (val <= 3 && val > 2) {
+                return Grade.B;
+            }
+            if (val <= 2 && val > 1) {
+                return Grade.C;
+            }
+            if (val <= 1 && val > 0) {
+               return Grade.D;
+            }
+            //default
+        } else {
+            return Grade.F;
+        }
+        return null;
+    }
 
 
 }

@@ -42,6 +42,10 @@ public class CourseGrade {
         setGradeTaken(gradeTaken);
     }
 
+    public CourseGrade() {
+
+    }
+
 
     //this method checks if courseDepartment is in courseDepartmentList
     public boolean checkCourseDepartment(String courseDepartment) {
@@ -118,7 +122,7 @@ public class CourseGrade {
         }
     }
 
-    //gradeTaken is in type of double
+    //in order to convert double to Grade. used in GenerateTranscript
     public void setGradeTaken(double val) {
         //val must be in this range.
         if (val > 0 && val <= 4) {

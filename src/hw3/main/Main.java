@@ -7,13 +7,19 @@ public class Main {
     public static void main(String[] args) {
         CourseGrade courseGrade1 = new CourseGrade("ECE", 23, 4, Grade.C);
         CourseGrade courseGrade = new CourseGrade("DD", 236, 3, 1.0);
+        CourseGrade courseGrade2 = new CourseGrade("MATH",200,4,Grade.A);
+        GenerateTranscript generateTranscript = new GenerateTranscript();
 
         Transcript transcript = new Transcript(1);
         Transcript transcript1 = new Transcript(2);
         transcript.addCourseTaken(courseGrade);
         transcript.addCourseTaken(courseGrade1);
+        transcript.addCourseTaken(courseGrade2);
         transcript1.addCourseTaken(courseGrade1);
         System.out.println(transcript);
         System.out.println(transcript1);
+        System.out.println("***********");
+        //generateTranscript.takeInputFromUser();
+        generateTranscript.takeInputFromFile();
     }
 }
